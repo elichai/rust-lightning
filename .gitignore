@@ -1,9 +1,9 @@
-/target/
-/net-tokio/target/
+net-tokio/target/
+target/
 **/*.rs.bk
 Cargo.lock
-/target/
 **/*.rs.bk
 .idea
 wasm-pack.log
 wasm-test/pkg/
+wasm-test/www/
