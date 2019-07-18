@@ -23,6 +23,8 @@ use util::logger::Logger;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicUsize, Ordering};
 
+const NOW: u64 = 1563479154;
+
 /// When on-chain outputs are created by rust-lightning an event is generated which informs the
 /// user thereof. This enum describes the format of the output and provides the OutPoint.
 pub enum SpendableOutputDescriptor {
