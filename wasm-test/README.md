@@ -9,10 +9,10 @@ cd my-project
 ```
 
 ## Requirements
-[`wasm-pack`][https://rustwasm.github.io/wasm-pack/installer/]
-[`npm`][https://www.npmjs.com/get-npm]
+[`wasm-pack`](https://rustwasm.github.io/wasm-pack/installer/)
+[`npm`](https://www.npmjs.com/get-npm)
 
-Modified [`rust-bitcoin`][https://github.com/rust-bitcoin/rust-bitcoin.git] With secp256k1 version 0.14.
+Modified [`rust-bitcoin`](https://github.com/rust-bitcoin/rust-bitcoin.git) With secp256k1 version 0.14.
 
 
 ## Usage
