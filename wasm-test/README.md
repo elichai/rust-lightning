@@ -1,6 +1,5 @@
 ## About
 
-[**📚 Read this template tutorial! 📚**][template-docs]
 This was built using a template using `cargo generate`.
 [Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
 
