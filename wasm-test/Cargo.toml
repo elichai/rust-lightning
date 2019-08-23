@@ -12,11 +12,9 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 wasm-bindgen = "0.2"
-bitcoin = {path = "../../../rust-bitcoin"}
+bitcoin = "0.20"
+secp256k1 = "0.15"
 lightning = {path = "../" }
-secp256k1 = "0.14"
-bitcoin_hashes = "0.3"
-rand = { version = "0.7", features = ["wasm-bindgen"]}
 
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
