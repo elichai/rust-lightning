@@ -20,10 +20,10 @@ use bitcoin::consensus::encode::{self, Decodable, Encodable};
 use bitcoin::util::hash::BitcoinHash;
 use bitcoin::util::bip143;
 
-use bitcoin_hashes::Hash;
-use bitcoin_hashes::sha256::Hash as Sha256;
-use bitcoin_hashes::hash160::Hash as Hash160;
-use bitcoin_hashes::sha256d::Hash as Sha256dHash;
+use bitcoin::hashes::Hash;
+use bitcoin::hashes::sha256::Hash as Sha256;
+use bitcoin::hashes::hash160::Hash as Hash160;
+use bitcoin::hashes::sha256d::Hash as Sha256dHash;
 
 use secp256k1::{Secp256k1,Signature};
 use secp256k1::key::{SecretKey,PublicKey};
@@ -2815,10 +2815,10 @@ mod tests {
 	use bitcoin::blockdata::transaction::{Transaction, TxIn, TxOut, SigHashType};
 	use bitcoin::blockdata::transaction::OutPoint as BitcoinOutPoint;
 	use bitcoin::util::bip143;
-	use bitcoin_hashes::Hash;
-	use bitcoin_hashes::sha256::Hash as Sha256;
-	use bitcoin_hashes::sha256d::Hash as Sha256dHash;
-	use bitcoin_hashes::hex::FromHex;
+	use bitcoin::hashes::Hash;
+	use bitcoin::hashes::sha256::Hash as Sha256;
+	use bitcoin::hashes::sha256d::Hash as Sha256dHash;
+	use bitcoin::hashes::hex::FromHex;
 	use hex;
 	use ln::channelmanager::{PaymentPreimage, PaymentHash};
 	use ln::channelmonitor::{ChannelMonitor, InputDescriptors};

@@ -1,9 +1,8 @@
 extern crate bitcoin;
-extern crate bitcoin_hashes;
 extern crate lightning;
 extern crate secp256k1;
 
-use bitcoin_hashes::sha256d::Hash as Sha256dHash;
+use bitcoin::hashes::sha256d::Hash as Sha256dHash;
 use bitcoin::blockdata::script::{Script, Builder};
 
 use lightning::chain::chaininterface::{ChainError,ChainWatchInterface, ChainListener};

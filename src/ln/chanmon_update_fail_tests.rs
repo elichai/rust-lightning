@@ -10,8 +10,8 @@ use ln::msgs::{ChannelMessageHandler, LocalFeatures, RoutingMessageHandler};
 use util::events::{Event, EventsProvider, MessageSendEvent, MessageSendEventsProvider};
 use util::errors::APIError;
 
-use bitcoin_hashes::sha256::Hash as Sha256;
-use bitcoin_hashes::Hash;
+use bitcoin::hashes::sha256::Hash as Sha256;
+use bitcoin::hashes::Hash;
 
 use ln::functional_test_utils::*;
 

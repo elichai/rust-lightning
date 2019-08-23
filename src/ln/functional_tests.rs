@@ -22,7 +22,7 @@ use util::config::UserConfig;
 use util::logger::Logger;
 
 use bitcoin::util::hash::BitcoinHash;
-use bitcoin_hashes::sha256d::Hash as Sha256dHash;
+use bitcoin::hashes::sha256d::Hash as Sha256dHash;
 use bitcoin::util::bip143;
 use bitcoin::util::address::Address;
 use bitcoin::util::bip32::{ChildNumber, ExtendedPubKey, ExtendedPrivKey};
@@ -33,8 +33,8 @@ use bitcoin::blockdata::opcodes;
 use bitcoin::blockdata::constants::genesis_block;
 use bitcoin::network::constants::Network;
 
-use bitcoin_hashes::sha256::Hash as Sha256;
-use bitcoin_hashes::Hash;
+use bitcoin::hashes::sha256::Hash as Sha256;
+use bitcoin::hashes::Hash;
 
 use secp256k1::{Secp256k1, Message};
 use secp256k1::key::{PublicKey,SecretKey};
