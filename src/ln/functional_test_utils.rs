@@ -307,10 +307,13 @@ pub fn create_announced_chan_between_nodes_with_value(nodes: &Vec<Node>, a: usiz
 macro_rules! check_spends {
 	($tx: expr, $spends_tx: expr) => {
 		{
-			let mut funding_tx_map = HashMap::new();
-			let spends_tx = $spends_tx;
-			funding_tx_map.insert(spends_tx.txid(), spends_tx);
-			$tx.verify(&funding_tx_map).unwrap();
+			$tx.verify(|out_point| {
+				if out_point.txid == $spends_tx.txid() {
+					$spends_tx.output.get(out_point.vout as usize).cloned()
+				} else {
+					None
+				}
+			}).unwrap();
 		}
 	}
 }

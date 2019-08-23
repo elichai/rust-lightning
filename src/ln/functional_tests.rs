@@ -2032,9 +2032,16 @@ fn claim_htlc_outputs_single_tx() {
 
 		let mut revoked_tx_map = HashMap::new();
 		revoked_tx_map.insert(revoked_local_txn[0].txid(), revoked_local_txn[0].clone());
-		node_txn[0].verify(&revoked_tx_map).unwrap();
-		node_txn[1].verify(&revoked_tx_map).unwrap();
-		node_txn[2].verify(&revoked_tx_map).unwrap();
+		let closure = |out_point: &BitcoinOutPoint| {
+			if out_point.txid == revoked_local_txn[0].txid() {
+				revoked_local_txn[0].output.get(out_point.vout as usize).cloned()
+			} else {
+				None
+			}
+		};
+		node_txn[0].verify(closure).unwrap();
+		node_txn[1].verify(closure).unwrap();
+		node_txn[2].verify(closure).unwrap();
 
 		let mut witness_lens = BTreeSet::new();
 		witness_lens.insert(node_txn[0].input[0].witness.last().unwrap().len());
